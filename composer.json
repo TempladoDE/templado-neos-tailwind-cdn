@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "templado/tailwindtheme",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Templado\\TailwindTheme\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Templado.TailwindTheme"
+        }
+    }
+}

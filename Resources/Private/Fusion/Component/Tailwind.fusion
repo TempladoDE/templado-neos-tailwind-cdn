@@ -1,0 +1,27 @@
+prototype(Templado.TailwindTheme:StyleConfig) < prototype(Neos.Fusion:Component) {
+    @class = '\\Templado\\TailwindTheme\\Fusion\\TailwindThemeObject'
+    colors = null
+}
+
+prototype(Templado.TailwindTheme:StyleCdn) < prototype(Neos.Fusion:Component) {
+    cdnUrl = "https://cdn.tailwindcss.com"
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'script'
+        attributes.src = ${props.cdnUrl}
+    }
+}
+
+prototype(Templado.TailwindTheme:Head.Cdn) < prototype(Neos.Fusion:Component) {
+    colors = null
+    renderer = Neos.Fusion:Join {
+        10 = Templado.TailwindTheme:StyleCdn
+        20 = Neos.Fusion:Tag {
+            tagName = 'style'
+            attributes.type = 'text/tailwindcss'
+            content = Templado.TailwindTheme:StyleConfig {
+                colors = ${props.colors}
+            }
+        }
+    }
+}
