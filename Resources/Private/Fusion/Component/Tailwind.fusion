@@ -4,7 +4,7 @@ prototype(Templado.TailwindTheme:StyleConfig) < prototype(Neos.Fusion:Component)
 }
 
 prototype(Templado.TailwindTheme:StyleCdn) < prototype(Neos.Fusion:Component) {
-    cdnUrl = "https://cdn.tailwindcss.com"
+    cdnUrl = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
 
     renderer = Neos.Fusion:Tag {
         tagName = 'script'
