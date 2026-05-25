@@ -9,8 +9,10 @@ class TailwindThemeObject extends AbstractFusionObject
     public function evaluate()
     {
         $colors = $this->fusionValue('colors') ?? [];
+        $fonts = $this->fusionValue('fonts') ?? [];
         $theme = [
             'color' => $colors,
+            'font' => $fonts
         ];
 
         $style = ['@theme {'];
