@@ -1,6 +1,7 @@
 prototype(Templado.TailwindTheme:StyleConfig) < prototype(Neos.Fusion:Component) {
     @class = '\\Templado\\TailwindTheme\\Fusion\\TailwindThemeObject'
     colors = null
+    fonts = null
 }
 
 prototype(Templado.TailwindTheme:StyleCdn) < prototype(Neos.Fusion:Component) {
@@ -14,6 +15,7 @@ prototype(Templado.TailwindTheme:StyleCdn) < prototype(Neos.Fusion:Component) {
 
 prototype(Templado.TailwindTheme:Head.Cdn) < prototype(Neos.Fusion:Component) {
     colors = null
+    fonts = null
     renderer = Neos.Fusion:Join {
         10 = Templado.TailwindTheme:StyleCdn
         20 = Neos.Fusion:Tag {
