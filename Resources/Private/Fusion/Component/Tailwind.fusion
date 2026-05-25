@@ -23,6 +23,7 @@ prototype(Templado.TailwindTheme:Head.Cdn) < prototype(Neos.Fusion:Component) {
             attributes.type = 'text/tailwindcss'
             content = Templado.TailwindTheme:StyleConfig {
                 colors = ${props.colors}
+                fonts = ${props.fonts}
             }
         }
     }
